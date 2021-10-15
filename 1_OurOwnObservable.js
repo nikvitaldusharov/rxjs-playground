@@ -1,12 +1,6 @@
 
 class Observable {
-
-    constructor(func) {
-        this.mainFunc = func;
-    }
-    subscribe = (subsciber) => {
-        this.mainFunc(subsciber);
-    }
+    //TODO
 }
 
 console.log("START");
