@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "rxjs": "~6.6.7",
+    "rxjs": "~7.4.0",
     "chalk": "latest"
   },
   "devDependencies": {
