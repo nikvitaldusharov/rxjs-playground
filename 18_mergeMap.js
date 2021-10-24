@@ -2,7 +2,14 @@ const { of, merge, interval, pipe, asyncScheduler, asapScheduler, queueScheduler
 const { mergeMap, map } = require('rxjs/operators');
  
 const letters = of('a', 'b', 'c');
+// const result = letters.pipe(
+//   mergeMap(x => interval(1000).pipe(map(i => x+i)))
+// );
+
+
 const result = letters.pipe(
-  mergeMap(x => interval(1000).pipe(map(i => x+i))),
+    mergeMap(x => interval(1000)), 
+    map(i => i)
 );
+
 result.subscribe(x => console.log(x));

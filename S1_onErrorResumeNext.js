@@ -4,9 +4,9 @@ const { subscribeOn, observeOn, count } = require('rxjs/operators');
 
 var source = onErrorResumeNext(
     of(42),
-    throwError("error 1"),
+    throwError(() => "error 1"),
     of(56),
-    throwError("error 2"),
+    throwError(() => "error 2"),
     of(78)
 );
 var subscription = source.subscribe(

@@ -22,13 +22,13 @@ const observable = new Observable(subscriber => {
 
 const subject = new Subject();
 
-subject.subscribe({
+observable.subscribe({
     next: (v) => console.log(chalk.redBright(`obsrAAA: ${v}`)),
     complete: () => console.log(chalk.redBright(`obsrAAA complete!`))
   });
-subject.subscribe({
+observable.subscribe({
     next: (v) => console.log(chalk.greenBright(`obsrBBB: ${v}`)),
     complete: () => console.log(chalk.greenBright(`obsrBBB complete!`))
 });
 
-observable.subscribe(subject);
+//observable.subscribe(subject);
